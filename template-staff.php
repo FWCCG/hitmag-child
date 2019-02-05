@@ -29,9 +29,8 @@ get_header();
 	</header><!-- .entry-header -->
 			
 			 <?php the_content();?> 
-			  
+
 			<div class="whoswho__container">
-				
 					
 			<?php
 			  $whoswhoPage = new WP_Query(array(
@@ -50,9 +49,9 @@ get_header();
 						<?php the_post_thumbnail('whoswho-small'); ?>
 					</div>
 					<div class="whoswho__content">		  
-					  <h4><?php the_field(salutation); echo(' '); the_field(first_name); echo(' '); the_field(name); ?></h3>
-					  <h4><?php the_field(title); ?></h4>
-					  <p><?php the_field(intro); ?></p>
+					  <h4><?php the_field('salutation'); echo(' '); the_field('first_name'); echo(' '); the_field('name'); ?></h3>
+					  <h4><?php the_field('title'); ?></h4>
+					  <p><?php the_field('intro'); ?></p>
 						
 						<?php // vars	
 				  		$whichccgs = get_field('ccg');

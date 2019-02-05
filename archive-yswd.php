@@ -32,8 +32,8 @@ get_header(); ?>
             if ( $yswdPage->have_posts() ) : while ( $yswdPage->have_posts() ) : $yswdPage->the_post(); ?>
 				
             <div class="yswd__container">
-                <div class="yswd__yousaid"><?php the_field(you_said); ?></div>
-                <div class="yswd__wedid"><?php echo mb_strimwidth(get_field(we_did), 0, 100, '...'); ?> <br><a href="<?php the_permalink(); ?>">Read More</a></div>
+                <div class="yswd__yousaid"><?php the_field('you_said'); ?></div>
+                <div class="yswd__wedid"><?php echo mb_strimwidth(get_field('we_did'), 0, 100, '...'); ?> <br><a href="<?php the_permalink(); ?>">Read More</a></div>
             </div>
             
 			<?php endwhile; else: ?>

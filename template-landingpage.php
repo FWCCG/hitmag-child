@@ -11,10 +11,16 @@ get_header();
 
     while ( have_posts() ) : the_post(); ?>
 
-        <main id="main" class="site-main subpage_page" role="main">
+        <main id="main" class="site-main subpage_page hitmag-page" role="main">
 
           <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-						<?php the_content();?>
+						
+          <header class="entry-header landing-page">
+		<?php the_title( '<h1 class="entry-title landing-page">', '</h1>' ); ?>
+
+
+	</header><!-- .entry-header -->        
+                        <?php the_content();?>
 							    <section class="promo-boxes_container" itemprop="articleBody">
 
                                                 

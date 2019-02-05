@@ -28,9 +28,9 @@ while ( have_posts() ) : the_post(); ?>
 
 			</header><!-- .entry-header -->
                 <h3>You said...</h3>
-              <div class="yswd__you-said-container"><span><?php the_field(you_said); ?></span></div>
+              <div class="yswd__you-said-container"><span><?php the_field('you_said'); ?></span></div>
                 <h3>We did...</h3>  
-              <div class="yswd__we-did-container"><?php the_field(we_did); ?></div>
+              <div class="yswd__we-did-container"><?php the_field('we_did'); ?></div>
 			  	
 	</main><!-- #main -->
 
