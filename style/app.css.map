@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";;;;;;AAEA,iBAAiB;EACf,UAAU,EAAE,KAAK;;AAEnB,YAAY;EACR,SAAS,EAAE,GAAG;EACd,KAAK,EAAE,KAAK",
+"sources": ["2-layouts/_header.sass"],
+"names": [],
+"file": "app.css"
+}

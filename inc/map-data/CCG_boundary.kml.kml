@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Untitled map</name>
+    <description/>
+    <Style id="poly-FF0000-1000-0-normal">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>000000ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="poly-FF0000-1000-0-highlight">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>1.5</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>000000ff</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <StyleMap id="poly-FF0000-1000-0">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-FF0000-1000-0-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-FF0000-1000-0-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>OGRGeoJSON</name>
+      <Placemark>
+        <name>Blackpool CCG</name>
+        <description><![CDATA[description: <br>objectid: 12<br>ccg18cd: E38000015<br>ccg18nm: NHS Blackpool CCG<br>bng_e: 332763<br>bng_n: 436633<br>long: -3.02284002<br>lat: 53.8216095<br>st_areashape: 36662592.3656456<br>st_lengthshape: 31232.7309730227]]></description>
+        <styleUrl>#poly-FF0000-1000-0</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value/>
+          </Data>
+          <Data name="objectid">
+            <value>12</value>
+          </Data>
+          <Data name="ccg18cd">
+            <value>E38000015</value>
+          </Data>
+          <Data name="ccg18nm">
+            <value>NHS Blackpool CCG</value>
+          </Data>
+          <Data name="bng_e">
+            <value>332763</value>
+          </Data>
+          <Data name="bng_n">
+            <value>436633</value>
+          </Data>
+          <Data name="long">
+            <value>-3.02284002</value>
+          </Data>
+          <Data name="lat">
+            <value>53.8216095</value>
+          </Data>
+          <Data name="st_areashape">
+            <value>36662592.3656456</value>
+          </Data>
+          <Data name="st_lengthshape">
+            <value>31232.7309730227</value>
+          </Data>
+        </ExtendedData>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -3.06118,53.775816,0
+                -3.032801,53.780813,0
+                -3.028802,53.773117,0
+                -2.996561,53.77445,0
+                -3.003967,53.791137,0
+                -2.983357,53.793804,0
+                -2.995005,53.818489,0
+                -3.011667,53.825591,0
+                -3.00764,53.834042,0
+                -3.019061,53.837113,0
+                -3.01968,53.868588,0
+                -3.052926,53.875489,0
+                -3.055197,53.8516,0
+                -3.062226,53.777471,0
+                -3.06118,53.775816,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Fylde and Wyre CCG</name>
+        <description><![CDATA[description: <br>objectid: 193<br>ccg18cd: E38000226<br>ccg18nm: NHS Fylde and Wyre CCG<br>bng_e: 345943<br>bng_n: 440271<br>long: -2.82329988<br>lat: 53.85585022<br>st_areashape: 467740122.678993<br>st_lengthshape: 143756.095497915]]></description>
+        <styleUrl>#poly-FF0000-1000-0</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value/>
+          </Data>
+          <Data name="objectid">
+            <value>193</value>
+          </Data>
+          <Data name="ccg18cd">
+            <value>E38000226</value>
+          </Data>
+          <Data name="ccg18nm">
+            <value>NHS Fylde and Wyre CCG</value>
+          </Data>
+          <Data name="bng_e">
+            <value>345943</value>
+          </Data>
+          <Data name="bng_n">
+            <value>440271</value>
+          </Data>
+          <Data name="long">
+            <value>-2.82329988</value>
+          </Data>
+          <Data name="lat">
+            <value>53.85585022</value>
+          </Data>
+          <Data name="st_areashape">
+            <value>467740122.678993</value>
+          </Data>
+          <Data name="st_lengthshape">
+            <value>143756.095497915</value>
+          </Data>
+        </ExtendedData>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -2.813608,53.936427,0
+                -2.864367,53.91808,0
+                -2.885245,53.936839,0
+                -2.87965,53.945461,0
+                -2.885203,53.948466,0
+                -2.894327,53.946541,0
+                -2.886688,53.941618,0
+                -2.904876,53.938501,0
+                -2.915565,53.943351,0
+                -2.92188,53.946215,0
+                -2.915731,53.950956,0
+                -2.91501,53.951512,0
+                -2.915739,53.95133,0
+                -2.996666,53.93108,0
+                -3.006935,53.901576,0
+                -3.00609,53.928064,0
+                -3.049287,53.920615,0
+                -3.052805,53.876758,0
+                -3.052926,53.875489,0
+                -3.01968,53.868588,0
+                -3.019061,53.837113,0
+                -3.00764,53.834042,0
+                -3.011667,53.825591,0
+                -2.995005,53.818489,0
+                -2.983357,53.793804,0
+                -3.003967,53.791137,0
+                -2.996561,53.77445,0
+                -3.028802,53.773117,0
+                -3.032801,53.780813,0
+                -3.06118,53.775816,0
+                -3.049477,53.757302,0
+                -3.015467,53.738602,0
+                -2.974769,53.733939,0
+                -2.941661,53.736283,0
+                -2.951679,53.733122,0
+                -2.910986,53.732858,0
+                -2.900959,53.732791,0
+                -2.858807,53.737811,0
+                -2.851814,53.739174,0
+                -2.790732,53.7545,0
+                -2.798611,53.770787,0
+                -2.78053,53.787951,0
+                -2.81685,53.813549,0
+                -2.825994,53.819987,0
+                -2.825291,53.820103,0
+                -2.797864,53.824588,0
+                -2.800135,53.833138,0
+                -2.770688,53.840421,0
+                -2.761908,53.821847,0
+                -2.776374,53.809275,0
+                -2.767193,53.803311,0
+                -2.755342,53.811659,0
+                -2.751022,53.797885,0
+                -2.729586,53.796256,0
+                -2.736202,53.81549,0
+                -2.703749,53.817622,0
+                -2.700421,53.854336,0
+                -2.709816,53.853642,0
+                -2.68654,53.890513,0
+                -2.629922,53.893247,0
+                -2.616628,53.899804,0
+                -2.616033,53.922824,0
+                -2.650833,53.952255,0
+                -2.702049,53.943556,0
+                -2.715656,53.980244,0
+                -2.735237,53.974526,0
+                -2.741476,53.956857,0
+                -2.755375,53.952331,0
+                -2.757868,53.963108,0
+                -2.796314,53.97546,0
+                -2.807379,53.96203,0
+                -2.800204,53.941265,0
+                -2.813608,53.936427,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
