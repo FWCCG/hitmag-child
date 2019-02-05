@@ -46,14 +46,33 @@ class Search {
   }
 
   getResults() {
-    $.getJSON('http://dev.fyldecoast.local/wp-json/wp/v2/posts?search=' + this.searchField.val(), posts => {
+    $.getJSON(fyldecoastccgsData.root_url + '/wp-json/fyldecoast/v1/search?term=' + this.searchField.val(), (results) => {
       this.resultsDiv.html(`
-        <h2 class="search-overlay__section-title">General Information</h2>
-        <ul class="link-list min-list">
-          ${posts.map(item => `<li><a href="${item.link}">${item.title.rendered}</a></li>`).join('')}
-        </ul>
-      `);
-    });
+      <div class="row">
+        <div class="one-third">
+          <h2 class="search-overlay__section-title">General Information </h2>
+          ${results.generalInfo.length ? '<ul class="link-list min-list">' : '<p>No general information matches your search.'}
+          ${results.generalInfo.map(item => `<li><a href="${item.url}">${item.title}</a> </li>`).join('')}
+          ${results.generalInfo.length ? '</ul>' : ''}          
+        </div>
+        <div class="one-third">
+          <h2 class="search-overlay__section-title">Latest News</h2>
+          ${results.news.length ? '<ul class="link-list min-list">' : '<p>No news matches your search.'}
+          ${results.news.map(item => `<li><a href="${item.url}">${item.title}</a> </li>`).join('')}
+          ${results.news.length ? '</ul>' : ''}
+        </div>
+        <div class="one-third">
+          <h2 class="search-overlay__section-title">Events</h2>
+          ${results.events.length ? '<ul class="link-list min-list">' : '<p>No events match your search.'}
+          ${results.events.map(item => `<li><a href="${item.url}">${item.title}</a> </li>`).join('')}
+          ${results.events.length ? '</ul>' : ''}
+          <h2 class="search-overlay__section-title">Documents</h2>
+          ${results.documents.length ? '<ul class="link-list min-list">' : '<p>No documents matche your search.'}
+          ${results.documents.map(item => `<li><a href="${item.url}">${item.title}</a> </li>`).join('')}
+          ${results.documents.length ? '</ul>' : ''}
+        </div>
+      <div>`);
+    })
   }
 
   keyPressDispatcher(e) {

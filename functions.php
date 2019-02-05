@@ -1,12 +1,12 @@
 <?php
 
+require get_theme_file_path( '/inc/functions/search-route.php' );
+
 function fyldecoastccgs_doclibrary_rest() {
     
 register_rest_field('wpfb_filepage', 'authorName', array(
     'get_callback' => function() {get_the_author();}
-)
-
-);    
+));    
 }
 
     
@@ -18,7 +18,7 @@ function fyldeCoastCCG_files() {
 	}
     wp_enqueue_script('fyldecoastccgs-js', get_theme_file_uri('/inc/js/scripts.bundled.js'), NULL, microtime(), true);
     wp_localize_script('fyldecoastccgs-js', 'fyldecoastccgsData', array(
-        'root_url' => get_theme_file_uri(),
+        'root_url' => get_site_url(),
         'nonce' => wp_create_nonce('wp_rest')
     ));
 
