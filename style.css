@@ -9,4 +9,4 @@ Template: hitmag
 Version: v1.0.6
 */
 @import url("../hitmag/style.css");
-@import url("/style/css/app.css");
+@import url("style/css/app.css");
