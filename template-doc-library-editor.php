@@ -11,7 +11,7 @@ get_header();
 
     while ( have_posts() ) : the_post(); ?>
 		
-        <main id="main" class="site-main" role="main">
+        <main id="main" class="site-main whoswho_page" role="main">
 
           <article id="post-<?php the_ID(); ?>" <?php $classes = array('clearfix','hitmag-page'); post_class( $classes ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 			  
@@ -32,15 +32,25 @@ get_header();
 			  
 			
 				
-			<?php // Get total number of posts in post-type-name
-	               
+            <?php // Get total number of posts in post-type-name
+            
+            $docTopic = sanitize_text_field (get_query_var('DocTopic', '25')); 
+            if ($docTopic)
+            
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
             $doclibraryPage = new WP_Query(array(
-			      'post_type' => array('wpfb_filepage'),
+			  'post_type' => array('wpfb_filepage'),
 	          'post_status' => array('published'),
 	          'posts_per_page' => 100,
 	          'order' => 'DSC',
-	          'orderby' => 'title',
+              'orderby' => 'title',
+              'tax_query' => array(
+                array(
+                 'taxonomy' => 'wpfb_file_category',
+                 'field' => 'term_id',
+                 'terms' => array($docTopic),
+                   ),
+                ),
 			  'paged' => $paged,  
             ));
               
@@ -95,7 +105,21 @@ get_header();
 
         </main>
 
-   
+        <aside id="secondary" class="widget-area" role="complementary">
+	
+                <form method="GET">
+                    <select name="DocTopic">
+                    <option value = "25" selected> </option>
+                    <option value = "26">Policies and Procedures</option>
+                    <option value = "31">Strategy</option>
+                    <option value = "171">Corporate documents</option>
+                    <option value = "185">Equality and inclusion</option>
+                    <option value = "62">Lists and registers</option>
+                    <option value = "177">Medicines optimisation</option>
+                    <option value = "164">Commissioning plan</option>
+                    </select>
+                    <button>Submit</button>
+                </form>    
+    </aside><!-- #secondary -->
 <?php 
-
 get_footer();

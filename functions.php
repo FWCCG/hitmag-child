@@ -1,5 +1,12 @@
 <?php
 
+function fyldecoastccgsQueryVars($vars) {
+    $vars[] = 'DocTopic';
+    return $vars;
+  }
+  
+  add_filter('query_vars', 'fyldecoastccgsQueryVars');
+
 require get_theme_file_path( '/inc/functions/search-route.php' );
 
 function fyldecoastccgs_doclibrary_rest() {
