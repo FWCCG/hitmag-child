@@ -57,7 +57,7 @@ get_header();
                 <li class="doc-library__item" data-id="<?php the_id();?>">
                     <div class="doc-library-editor__container">
                         <div class="doc-library-editor__image">
-                            <a href="<?php echo esc_url( get_post_meta( get_the_ID(), 'file_url', true ) ); ?>">
+                            <a href="<?php echo esc_url( get_post_meta( get_the_ID(), 'file_url', true ) ); ?>" target="_blank">
                                 <img class="thumb" src="<?php echo esc_url( get_post_meta( get_the_ID(), 'file_icon_url', true ) ); ?>" alt="<?php the_title_attribute(); ?>" />
                             </a>
                         </div>

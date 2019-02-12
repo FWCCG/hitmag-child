@@ -16,6 +16,7 @@ function fyldeCoastCCG_files() {
 	wp_enqueue_style('FontAwesome', '//use.fontawesome.com/releases/v5.6.3/css/all.css');
     wp_enqueue_script('googleMap', '//maps.googleapis.com/maps/api/js?key=AIzaSyB0SyBBAol1HZW64OQjRQPK3yaii9W9YaE', NULL, '1.0', true);
 	}
+    wp_enqueue_style('fyldecoastccgs-css', get_theme_file_uri('/style/css/app.css'));
     wp_enqueue_script('fyldecoastccgs-js', get_theme_file_uri('/inc/js/scripts-bundled.js'), NULL, microtime(), true);
     wp_localize_script('fyldecoastccgs-js', 'fyldecoastccgsData', array(
         'root_url' => get_site_url(),
