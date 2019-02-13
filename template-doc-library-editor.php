@@ -107,19 +107,25 @@ get_header();
 
         <aside id="secondary" class="widget-area" role="complementary">
 	
-                <form method="GET">
-                    <select name="DocTopic">
-                    <option value = "25" selected> </option>
-                    <option value = "26">Policies and Procedures</option>
-                    <option value = "31">Strategy</option>
-                    <option value = "171">Corporate documents</option>
-                    <option value = "185">Equality and inclusion</option>
-                    <option value = "62">Lists and registers</option>
-                    <option value = "177">Medicines optimisation</option>
-                    <option value = "164">Commissioning plan</option>
-                    </select>
-                    <button>Submit</button>
-                </form>    
+        <form method="GET">
+            <label for="DocTopic" class="doclibrary-filter--label">Topic</label>
+      <select name="DocTopic" id="DocTopic" class="doclibrary-filter--select">
+        <option value = "25" >Select Topic</option>
+        <option value = "164">Commissioning plan</option>
+        <option value = "171">Corporate documents</option>
+        <option value = "185">Equality and inclusion</option>
+        <option value = "168">Engagement reports</option>
+        <option value = "26">Policies and Procedures</option>
+        <option value = "43">  - Blackpool CCG</option>
+        <option value = "44">  - Fylde and Wyre CCG</option>
+        <option value = "31">Strategies</option>
+        <option value = "62">Lists and registers</option>
+        <option value = "177">Medicines optimisation</option>
+        <option value = "179">  - Blackpool CCG</option>
+        <option value = "178">  - Fylde and Wyre CCG</option>
+      </select>
+        <button class="doclibrary-filter--button">Submit</button>
+  </form>
     </aside><!-- #secondary -->
 <?php 
 get_footer();
