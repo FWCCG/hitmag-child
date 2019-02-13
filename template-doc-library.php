@@ -30,10 +30,15 @@ get_header();
         <option value = "164">Commissioning plan</option>
         <option value = "171">Corporate documents</option>
         <option value = "185">Equality and inclusion</option>
+        <option value = "168">Engagement reports</option>
         <option value = "26">Policies and Procedures</option>
+        <option value = "43">  - Blackpool CCG</option>
+        <option value = "44">  - Fylde and Wyre CCG</option>
         <option value = "31">Strategies</option>
         <option value = "62">Lists and registers</option>
         <option value = "177">Medicines optimisation</option>
+        <option value = "179">  - Blackpool CCG</option>
+        <option value = "178">  - Fylde and Wyre CCG</option>
       </select>
       <label for="orderBy" class="doclibrary-filter--label">Order results by</label>
         <select name="orderBy" id="orderBy" class="doclibrary-filter--select">
@@ -76,7 +81,7 @@ get_header();
             
 	        $total_posts = $doclibraryPage->found_posts;
 	        
-            echo '<span class="doc-library__count">' . number_format($total_posts) . '</span> documents in library. '; ?>		
+            echo '<span class="doclibrary-results--count"><span class="doclibrary-results--count-number">' . number_format($total_posts) . '</span> documents in library.</span> '; ?>		
               <ul class="doc-library__list"> <?php
 			  
             while($doclibraryPage->have_posts()) {  $doclibraryPage->the_post(); 

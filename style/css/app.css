@@ -1,7 +1,4 @@
 /*BASE STYLES*/
-/*VARIABLES*/
-/*Colour scheme*/
-/*Base Sytles*/
 /*
 Theme Name: HitMag
 Theme URI: http://themezhut.com/themes/hitmag/
@@ -92,7 +89,7 @@ hr { box-sizing: content-box; height: 0; }
 
 pre { overflow: auto; }
 
-code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+code, kbd, pre, samp { font-size: 1em; }
 
 button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
 
@@ -127,7 +124,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; }
 
 /*-------------------------------------------------------------- # Typography --------------------------------------------------------------*/
-body, button, input, select, textarea { color: #404040; font-family: "Lato", sans-serif; font-size: 16px; font-size: 1rem; line-height: 1.5; }
+body, button, input, select, textarea { color: #404040; font-size: 16px; font-size: 1rem; line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 { clear: both; margin: 0.9em 0; line-height: 1.3; }
 
@@ -151,7 +148,7 @@ blockquote { margin: 0 1.5em; }
 
 address { margin: 0 0 1.5em; }
 
-pre { background: #eee; font-family: "Courier 10 Pitch", Courier, monospace; font-size: 15px; font-size: 0.9375rem; line-height: 1.6; margin-bottom: 1.6em; max-width: 100%; overflow: auto; padding: 1.6em; }
+pre { background: #eee; font-size: 15px; font-size: 0.9375rem; line-height: 1.6; margin-bottom: 1.6em; max-width: 100%; overflow: auto; padding: 1.6em; }
 
 code, kbd, tt, var { font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; font-size: 15px; font-size: 0.9375rem; }
 
@@ -243,13 +240,13 @@ th { background: #f8f8f8; font-weight: bold; padding: 8px 15px; }
 td { padding: 5px 15px; }
 
 /*-------------------------------------------------------------- # Forms --------------------------------------------------------------*/
-button, input[type="button"], input[type="reset"], input[type="submit"] { border: none; border-radius: 3px; background: #e74c3c; color: #fff; font-size: 12px; font-size: 0.75rem; font-weight: bold; line-height: 1; padding: 13px 20px; text-transform: uppercase; font-family: "Ubuntu", sans-serif; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { border: none; border-radius: 3px; background: #e74c3c; color: #fff; font-size: 12px; font-size: 0.75rem; font-weight: bold; line-height: 1; padding: 13px 20px; text-transform: uppercase; }
 
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover { background: #222222; }
 
 button:active, button:focus, input[type="button"]:active, input[type="button"]:focus, input[type="reset"]:active, input[type="reset"]:focus, input[type="submit"]:active, input[type="submit"]:focus { background: #222222; }
 
-.th-readmore { display: inline-block; border-radius: 3px; font-weight: bold; color: #ffffff; font-size: 11px; background: #e74c3c; padding: 8px 15px; text-decoration: none; text-transform: uppercase; font-family: "Ubuntu", sans-serif; }
+.th-readmore { display: inline-block; border-radius: 3px; font-weight: bold; color: #ffffff; font-size: 11px; background: #e74c3c; padding: 8px 15px; text-decoration: none; text-transform: uppercase; }
 
 .th-readmore:hover { background: #222; text-decoration: none; color: #ffffff; }
 
@@ -278,7 +275,7 @@ a:hover, a:active { outline: 0; }
 /*-------------------------------------------------------------- ## Menus --------------------------------------------------------------*/
 .hm-nav-container { position: relative; background-color: #222; clear: both; }
 
-.main-navigation { background-color: #222; clear: both; display: block; float: left; font-family: "Ubuntu", sans-serif; width: 100%; }
+.main-navigation { background-color: #222; clear: both; display: block; float: left; width: 100%; }
 
 .main-navigation a { line-height: 20px; padding: 12.5px 17px; color: #ddd; }
 
@@ -322,7 +319,7 @@ a:hover, a:active { outline: 0; }
 
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next { float: right; text-align: right; width: 50%; }
 
-.post-navigation .meta-nav { font-family: "Ubuntu", sans-serif; display: block; color: #aaa; font-size: 16px; font-size: 1rem; letter-spacing: 1px; margin-bottom: 5px; text-transform: uppercase; }
+.post-navigation .meta-nav { display: block; color: #aaa; font-size: 16px; font-size: 1rem; letter-spacing: 1px; margin-bottom: 5px; text-transform: uppercase; }
 
 .post-navigation .post-title { color: #222; font-weight: bold; }
 
@@ -465,7 +462,7 @@ a:hover, a:active { outline: 0; }
 
 @media (min-width: 992px) { .hm-search-box-container { right: 40px; } }
 
-#hm-search-form .search-form .search-submit { border-radius: 0; box-shadow: none; background-color: #e74c3c; border: none; color: #fff; font-size: 12px; font-size: 0.75rem; border-radius: 3px; font-weight: bold; font-family: "Ubuntu", sans-serif; height: 40px; line-height: 40px; padding: 0; text-shadow: none; text-transform: uppercase; width: 92px; }
+#hm-search-form .search-form .search-submit { border-radius: 0; box-shadow: none; background-color: #e74c3c; border: none; color: #fff; font-size: 12px; font-size: 0.75rem; border-radius: 3px; font-weight: bold; height: 40px; line-height: 40px; padding: 0; text-shadow: none; text-transform: uppercase; width: 92px; }
 
 #hm-search-form .search-form .search-submit:hover { background: #222; }
 
@@ -531,9 +528,9 @@ a:hover, a:active { outline: 0; }
 
 .widget select { max-width: 100%; }
 
-.elementor-widget-container h5, .widget-title { font-size: 18px; font-size: 1.125rem; border-bottom: 2px solid #e74c3c; font-family: "Ubuntu", sans-serif; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline-block; margin-top: 0; margin-bottom: 24px; }
+.elementor-widget-container h5, .widget-title { font-size: 18px; font-size: 1.125rem; border-bottom: 2px solid #e74c3c; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline-block; margin-top: 0; margin-bottom: 24px; }
 
-.footer-widget-title { font-size: 18px; font-size: 1.125rem; border-bottom: 2px solid #e74c3c; font-family: "Ubuntu", sans-serif; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline-block; color: #eee; margin-top: 0; margin-bottom: 24px; }
+.footer-widget-title { font-size: 18px; font-size: 1.125rem; border-bottom: 2px solid #e74c3c; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline-block; color: #eee; margin-top: 0; margin-bottom: 24px; }
 
 .hm-header-sidebar { max-width: 100%; margin: 20px 0 0; overflow: hidden; float: right; }
 
@@ -547,7 +544,7 @@ a:hover, a:active { outline: 0; }
 
 .widget a:hover, .widget-area a:hover { color: #e74c3c; }
 
-a.hm-viewall { font-family: "Ubuntu", sans-serif; font-weight: bold; text-transform: uppercase; float: right; margin-top: 2px; margin-bottom: 20px; font-size: 10px; padding: 3px 10px; border-radius: 3px; color: #fff; background: #e74c3c; }
+a.hm-viewall { font-weight: bold; text-transform: uppercase; float: right; margin-top: 2px; margin-bottom: 20px; font-size: 10px; padding: 3px 10px; border-radius: 3px; color: #fff; background: #e74c3c; }
 
 a.hm-viewall:visited { color: #fff; }
 
@@ -688,7 +685,7 @@ ul.hm-tab-nav { overflow: hidden; margin: 0 0 25px 0; background: #ECF0F1; list-
 
 li.hm-tab { float: left; padding: 0 !important; }
 
-.hm-tabs-wdt .hm-tab-anchor { font-size: 15px; padding: 10px 20px; line-height: 40px; display: inline-block; font-family: "Ubuntu", sans-serif; font-weight: bold; line-height: 1.3; text-transform: uppercase; color: #333; }
+.hm-tabs-wdt .hm-tab-anchor { font-size: 15px; padding: 10px 20px; line-height: 40px; display: inline-block; font-weight: bold; line-height: 1.3; text-transform: uppercase; color: #333; }
 
 .hm-tabs-wdt .hm-tab-anchor:focus { outline: none; }
 
@@ -855,7 +852,7 @@ body { background: #ddd; }
 
 .site-header { margin: 0 0 40px; }
 
-.hm-top-bar { height: 35px; background: #ECF0F1; border-bottom: 1px solid #ddd; font-family: "Ubuntu", sans-serif; }
+.hm-top-bar { height: 35px; background: #ECF0F1; border-bottom: 1px solid #ddd; }
 
 .hm-date { font-size: 12px; font-size: 0.75rem; line-height: 20px; margin: 7.5px 15px 7.5px 0; float: left; font-weight: bold; }
 
@@ -902,7 +899,7 @@ body { background: #ddd; }
 
 @media (max-width: 768px) { .archive-thumb img { width: 100%; } }
 
-.cat-links { font-family: "Ubuntu", sans-serif; color: #bbb; }
+.cat-links { color: #bbb; }
 
 .cat-links a { color: #e74c3c; font-weight: bold; }
 
@@ -960,9 +957,9 @@ body { background: #ddd; }
 
 .hitmag-page .entry-title { margin: 0 0 1em 0; font-size: 34px; font-size: 2.125rem; }
 
-.arc-page-title { font-size: 18px; font-size: 1.125rem; padding: 2px 0; border-bottom: 2px solid #e74c3c; font-family: "Ubuntu", sans-serif; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline; }
+.arc-page-title { font-size: 18px; font-size: 1.125rem; padding: 2px 0; border-bottom: 2px solid #e74c3c; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline; }
 
-.srch-page-title { font-size: 18px; font-size: 1.125rem; padding: 2px 0; border-bottom: 2px solid #e74c3c; font-family: "Ubuntu", sans-serif; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline; }
+.srch-page-title { font-size: 18px; font-size: 1.125rem; padding: 2px 0; border-bottom: 2px solid #e74c3c; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline; }
 
 .archive-description { margin-top: 0.625em; font-style: italic; }
 
@@ -1295,7 +1292,7 @@ embed, iframe, object { max-width: 100%; }
 
 .woocommerce div.product .woocommerce-tabs .panel { margin: 10px 0 40px; padding: 10px 0 20px; }
 
-.woocommerce div.product .woocommerce-tabs .panel h2, .related > h2, .woocommerce-checkout h3, .cart_totals h2 { font-size: 18px; font-size: 1.125rem; font-family: "Ubuntu", sans-serif; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline-block; margin-top: 0; margin-bottom: 24px; }
+.woocommerce div.product .woocommerce-tabs .panel h2, .related > h2, .woocommerce-checkout h3, .cart_totals h2 { font-size: 18px; font-size: 1.125rem; font-weight: bold; line-height: 1.3; text-transform: uppercase; display: inline-block; margin-top: 0; margin-bottom: 24px; }
 
 .cart_totals h2, #order_review_heading { margin-top: 2em; }
 
@@ -1327,7 +1324,7 @@ embed, iframe, object { max-width: 100%; }
 
 .woocommerce-widget-area ul li a:hover { text-decoration: none; color: #e74c3c; }
 
-.woocommerce-widget-area .widget-title { background: #e74c3c; color: white; display: inline-block; font-family: "Ubuntu", sans-serif; font-size: 15px; font-size: 1.5rem; font-weight: 500; height: 32px; line-height: 32px; margin: 0 0 1px 0; padding: 0 1.2em; text-transform: uppercase; }
+.woocommerce-widget-area .widget-title { background: #e74c3c; color: white; display: inline-block; font-size: 15px; font-size: 1.5rem; font-weight: 500; height: 32px; line-height: 32px; margin: 0 0 1px 0; padding: 0 1.2em; text-transform: uppercase; }
 
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt { background: #e74c3c; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 
@@ -1365,6 +1362,14 @@ embed, iframe, object { max-width: 100%; }
 
 #review_form .comment-reply-title { border: none; margin-bottom: 1em; display: block; }
 
+/*VARIABLES*/
+/*Colour scheme*/
+/* Fonts */
+/*Base Sytles*/
+body { font-family: FrutigerLTStd-Light, Arial, sans-serif; color: #222222; }
+
+h1, h2, h3, h4, h5, h6 { font-family: FrutigerLT-Roman, Arial, sans-serif; }
+
 /*Layout Styles*/
 /*Header*/
 .header-main-area { max-height: 200px; background-color: #005db9; }
@@ -1373,7 +1378,9 @@ embed, iframe, object { max-width: 100%; }
 
 .site-branding { float: right; }
 
-/* Navigation */
+/* Main Navigation */
+nav { font-family: FrutigerLT-Roman, Arial, sans-serif; }
+
 .hm-nav-container { padding-top: 10px; }
 
 .main-navigation ul ul a { width: 250px; }
@@ -1381,6 +1388,9 @@ embed, iframe, object { max-width: 100%; }
 .main-navigation ul ul { background: #005db9; }
 
 .responsive-mainnav.responsive-topnav { background: #005db9; }
+
+/* Top Navigation */
+#top-navigation { font-family: FrutigerLT-Roman, Arial, sans-serif; }
 
 /* Landing Page */
 /* Document Library */
@@ -1405,6 +1415,10 @@ embed, iframe, object { max-width: 100%; }
 .doclibrary-results--date { display: inline-block; margin-top: 10px; font-size: 1rem; }
 
 .doclibrary-results--topic { display: inline-block; font-size: 0.8rem; margin: 10px 0px; margin-right: 10px; color: #222222; padding: 5px 10px; background: #E8EDEE; border-radius: 5px; }
+
+.doclibrary-results--count { font-family: FrutigerLT-Roman, Arial, sans-serif; font-size: 1.3rem; }
+
+.doclibrary-results--count .doclibrary-results--count-number { font-size: 2rem; }
 
 /*MODULES*/
 /*Slider*/
@@ -1526,6 +1540,6 @@ body.admin-bar .search-overlay { top: 32px; }
 /* Create Note */
 .create-note { background-color: #DDD; padding: 20px; margin-bottom: 20px; }
 
-.new-note-title { width: 100%; padding: 10px; font-family: 'Roboto', sans-serif; border: none; margin-bottom: 10px; font-size: 0.8rem; box-sizing: border-box; }
+.new-note-title { width: 100%; padding: 10px; border: none; margin-bottom: 10px; font-size: 0.8rem; box-sizing: border-box; }
 
-.new-note-body { width: 100%; box-sizing: border-box; resize: none; padding: 10px; font-family: 'Roboto', sans-serif; border: none; margin-bottom: 10px; height: 170px; font-size: 1.15rem; line-height: 1.65; }
+.new-note-body { width: 100%; box-sizing: border-box; resize: none; padding: 10px; border: none; margin-bottom: 10px; height: 170px; font-size: 1.15rem; line-height: 1.65; }

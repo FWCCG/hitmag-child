@@ -164,7 +164,6 @@ html {
   kbd,
   pre,
   samp {
-    font-family: monospace, monospace;
     font-size: 1em;
   }
   
@@ -264,7 +263,6 @@ html {
   select,
   textarea {
     color: #404040;
-    font-family: "Lato", sans-serif;
     font-size: 16px;
     font-size: 1rem;
     line-height: 1.5;
@@ -324,7 +322,6 @@ html {
   
   pre {
     background: #eee;
-    font-family: "Courier 10 Pitch", Courier, monospace;
     font-size: 15px;
     font-size: 0.9375rem;
     line-height: 1.6;
@@ -591,7 +588,6 @@ html {
     line-height: 1;
     padding: 13px 20px;
     text-transform: uppercase;
-    font-family: "Ubuntu", sans-serif;
   }
   
   button:hover,
@@ -621,7 +617,7 @@ html {
     padding: 8px 15px;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: "Ubuntu", sans-serif;
+
   }
   
   .th-readmore:hover {
@@ -726,7 +722,6 @@ html {
     clear: both;
     display: block;
     float: left;
-    font-family: "Ubuntu", sans-serif;
     width: 100%;
   }
   
@@ -874,7 +869,7 @@ html {
   }
   
   .post-navigation .meta-nav {
-    font-family: "Ubuntu", sans-serif;
+
     display: block;
     color: #aaa;
     font-size: 16px;
@@ -1334,7 +1329,7 @@ html {
     font-size: 0.75rem;
     border-radius: 3px;
     font-weight: bold;
-    font-family: "Ubuntu", sans-serif;
+
     height: 40px;
     line-height: 40px;
     padding: 0;
@@ -1562,7 +1557,7 @@ html {
     font-size: 18px;
     font-size: 1.125rem;
     border-bottom: 2px solid #e74c3c;
-    font-family: "Ubuntu", sans-serif;
+
     font-weight: bold;
     line-height: 1.3;
     text-transform: uppercase;
@@ -1575,7 +1570,7 @@ html {
     font-size: 18px;
     font-size: 1.125rem;
     border-bottom: 2px solid #e74c3c;
-    font-family: "Ubuntu", sans-serif;
+
     font-weight: bold;
     line-height: 1.3;
     text-transform: uppercase;
@@ -1619,7 +1614,7 @@ html {
   }
   
   a.hm-viewall {
-    font-family: "Ubuntu", sans-serif;
+
     font-weight: bold;
     text-transform: uppercase;
     float: right;
@@ -2044,7 +2039,7 @@ html {
     padding: 10px 20px;
     line-height: 40px;
     display: inline-block;
-    font-family: "Ubuntu", sans-serif;
+
     font-weight: bold;
     line-height: 1.3;
     text-transform: uppercase;
@@ -2509,7 +2504,7 @@ html {
     height: 35px;
     background: #ECF0F1;
     border-bottom: 1px solid #ddd;
-    font-family: "Ubuntu", sans-serif;
+
   }
   
   .hm-date {
@@ -2637,7 +2632,7 @@ html {
   }
   
   .cat-links {
-    font-family: "Ubuntu", sans-serif;
+
     color: #bbb;
   }
   
@@ -2823,7 +2818,7 @@ html {
     font-size: 1.125rem;
     padding: 2px 0;
     border-bottom: 2px solid #e74c3c;
-    font-family: "Ubuntu", sans-serif;
+
     font-weight: bold;
     line-height: 1.3;
     text-transform: uppercase;
@@ -2835,7 +2830,7 @@ html {
     font-size: 1.125rem;
     padding: 2px 0;
     border-bottom: 2px solid #e74c3c;
-    font-family: "Ubuntu", sans-serif;
+
     font-weight: bold;
     line-height: 1.3;
     text-transform: uppercase;
@@ -3785,7 +3780,7 @@ html {
   .cart_totals h2 {
     font-size: 18px;
     font-size: 1.125rem;
-    font-family: "Ubuntu", sans-serif;
+
     font-weight: bold;
     line-height: 1.3;
     text-transform: uppercase;
@@ -3868,7 +3863,7 @@ html {
     background: #e74c3c;
     color: white;
     display: inline-block;
-    font-family: "Ubuntu", sans-serif;
+
     font-size: 15px;
     font-size: 1.5rem;
     font-weight: 500;
