@@ -9,43 +9,65 @@
 
 get_header(); 
 
-    while ( have_posts() ) : the_post(); ?>
+    while ( have_posts() ) : the_post(); 
+    
+    $docTopic = sanitize_text_field (get_query_var('DocTopic', '25'));
+    $docKeyword = sanitize_text_field (get_query_var('DocKeyword', '')); 
+    $orderBy = sanitize_text_field (get_query_var('orderBy', 'ASC'));
+    
+    ?>
 		
-        <main id="main" class="site-main whoswho_page" role="main">
+    <aside class="doclibrary-aside">
+    <h1 class="doclibrary-title">Document library</h1>
+    <p>You can use the filters below to show only documents that match your interests.</p>
+    <div class="doclibrary-filtergroup">
+    <form method="GET">
+      <label for="DocKeyword" class="doclibrary-filter--label">Keyword</label>
+      <input type="search" id="filter-keyword" name="DocKeyword" class="doclibrary-filter--input" placeholder="<?php echo $docKeyword ?>">
+      <label for="DocTopic" class="doclibrary-filter--label">Topic</label>
+      <select name="DocTopic" id="DocTopic" class="doclibrary-filter--select">
+        <option value = "25" >Select Topic</option>
+        <option value = "164">Commissioning plan</option>
+        <option value = "171">Corporate documents</option>
+        <option value = "185">Equality and inclusion</option>
+        <option value = "26">Policies and Procedures</option>
+        <option value = "31">Strategies</option>
+        <option value = "62">Lists and registers</option>
+        <option value = "177">Medicines optimisation</option>
+      </select>
+      <label for="orderBy" class="doclibrary-filter--label">Order results by</label>
+        <select name="orderBy" id="orderBy" class="doclibrary-filter--select">
+          <option value = "" >Select a value</option>
+          <option value = "title" >Document name</option>
+          <option value = "date" >Date of publication</option>
+      </select>
+      <button class="doclibrary-filter--button">Submit</button>
+  </form>
+    </div>
+    </aside> 
+    
+    <main id="main" class="site-main doclibrary-page" role="main">
 
           <article id="post-<?php the_ID(); ?>" <?php $classes = array('clearfix','hitmag-page'); post_class( $classes ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-			  
-			  <header class="entry-header">
-		<?php
-
-			hitmag_category_list();
-
-		the_title( '<span class="entry-title-container"><h1 class="entry-title">', '</h1></span>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		
-		<?php ; endif ?>
-
-	</header><!-- .entry-header -->
 			
-			 <?php the_content();?> 
-			  
-			
-				
 			<?php // Get total number of posts in post-type-name
-	               
+            $docTopic = sanitize_text_field (get_query_var('DocTopic', '25'));
+            $docKeyword = sanitize_text_field (get_query_var('DocKeyword', '')); 
+            $orderBy = sanitize_text_field (get_query_var('orderBy', 'ASC'));
+     
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
             $doclibraryPage = new WP_Query(array(
-			  'post_type' => array('wpfb_filepage'),
+			      'post_type' => array('wpfb_filepage'),
 	          'post_status' => array('published'),
 	          'posts_per_page' => 10,
-	          'order' => 'ASC',
-	          'orderby' => 'date',
+            'order' => 'ASC',
+            's' => $docKeyword,
+	          'orderby' => $orderBy,
 	          'tax_query' => array(
                    array(
                     'taxonomy' => 'wpfb_file_category',
                     'field' => 'term_id',
-                    'terms' => array(25),
+                    'terms' => array($docTopic),
 		              ),
 	               ),
 			  'paged' => $paged,  
@@ -61,10 +83,21 @@ get_header();
                 
                 ?>
 			  	                    
-                <li class="doc-library__item"><a href="<?php the_permalink();?>" class="doc-library__title"><?php the_title(); ?></a><br>
-                  <span class="doc-library__meta">Date: <?php echo get_the_date() ?> | Topic: 
-                      <?php $terms = get_the_terms( $post->ID, 'wpfb_file_category' ); 
-                            foreach($terms as $term) { echo $term->name;}?></span></li>
+                <li class="doclibrary-results--item"><a href="<?php the_permalink();?>" class="doclibrary-results--title"><?php the_title(); ?></a><br>
+                  <span class="doclibrary-results--date"><i class="fa fa-calendar"></i> <?php echo get_the_date() ?></span><br>
+                  <span class="doclibrary-results--topics"> 
+                      <?php $terms = get_the_terms( $post->ID, 'wpfb_file_category'); $i = 1;
+                            foreach($terms as $term) { if( is_wp_error( $term_link ) )
+                              continue;
+                              echo ('<span class="doclibrary-results--topic">');
+                              echo ($term->name);
+                              echo ('</span>');
+                              //  Add comma (except after the last theme)
+                              echo ($i < count($terms))? " " : "";
+                              // Increment counter
+                              $i++;}?>
+                  </span>
+                </li>
 			  <?php } 
                 
 			  endwhile; ?>
@@ -74,7 +107,7 @@ get_header();
                 <?php
                 
                 
-              if (function_exists(custom_pagination)) { ?>
+              if (function_exists('custom_pagination')) { ?>
     <div class="custom-pagination">
         <?php custom_pagination($doclibraryPage->max_num_pages, "", $paged); ?>
     </div>
@@ -90,5 +123,4 @@ get_header();
 
    
 <?php 
-get_sidebar();
 get_footer();

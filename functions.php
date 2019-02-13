@@ -2,6 +2,8 @@
 
 function fyldecoastccgsQueryVars($vars) {
     $vars[] = 'DocTopic';
+    $vars[] = 'DocKeyword';
+    $vars[] = 'orderBy';
     return $vars;
   }
   
@@ -360,6 +362,4 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
         echo "</div>";
     }
 }
-
-
 ?>

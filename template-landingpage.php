@@ -63,7 +63,7 @@ get_header();
                                 'post_parent' => $post->ID,
                                 'posts_per_page' => -1,
                                 'post_type' => 'page',
-				                'orderby' => 'title',
+				                'orderby' => 'menu_order',
 				                'order' => 'ASC',
                                 'meta_query' => array(
                                 array(

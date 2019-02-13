@@ -35,14 +35,14 @@ get_header();
             <?php // Get total number of posts in post-type-name
             
             $docTopic = sanitize_text_field (get_query_var('DocTopic', '25')); 
-            if ($docTopic)
+           
             
             $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
             $doclibraryPage = new WP_Query(array(
 			  'post_type' => array('wpfb_filepage'),
 	          'post_status' => array('published'),
 	          'posts_per_page' => 100,
-	          'order' => 'DSC',
+	          'order' => 'ASC',
               'orderby' => 'title',
               'tax_query' => array(
                 array(
