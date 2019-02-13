@@ -1398,6 +1398,8 @@ nav { font-family: FrutigerLT-Roman, Arial, sans-serif; }
 
 .doclibrary-page { width: 65.625%; float: right; max-width: 735px; }
 
+@media screen and (max-width: 991px) { .doclibrary-aside, .doclibrary-page { width: 100%; max-width: 100%; } }
+
 .doclibrary-title { margin: 0px; }
 
 .doclibrary-filter--label { display: block; width: 100%; margin: 20px 0 10px; font-size: 1.1rem; }
@@ -1418,7 +1420,7 @@ nav { font-family: FrutigerLT-Roman, Arial, sans-serif; }
 
 .doclibrary-results--count { font-family: FrutigerLT-Roman, Arial, sans-serif; font-size: 1.3rem; }
 
-.doclibrary-results--count .doclibrary-results--count-number { font-size: 2rem; }
+.doclibrary-results--count .doclibrary-results--count-number { font-size: 3rem; font-weight: bold; }
 
 /*MODULES*/
 /*Slider*/
