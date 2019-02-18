@@ -1,6 +1,6 @@
 <?php
 
-	function g7_clean_shortcodes($content) {$array = array (
+	function clean_shortcodes($content) {$array = array (
 			'<p>[' => '[',
 			']</p>' => ']',
 			']<br />' => ']',
@@ -9,22 +9,9 @@
 		return $content;
 	}
 
-	add_filter('the_content', 'g7_clean_shortcodes');
+	add_filter('the_content', 'clean_shortcodes');
 
-	function add_plugin($plugin_array) {
-		if (version_compare(get_bloginfo('version'), 3.9, '>=')) {
-			$plugin_array['g7_button'] = $this->url . 'js/buttons2.js';
-		} else {
-			$plugin_array['g7_button'] = $this->url . 'js/buttons2.js';
-		}
-		return $plugin_array;
-	}
-
-	function register_button($buttons) {
-		$buttons[] = 'separator';
-		$buttons[] = 'sc_button';
-		return $buttons;
-	}
+	
 
 	function create_accordion_shortcode( $atts , $content = null ) {
 
