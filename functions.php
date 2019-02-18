@@ -11,6 +11,8 @@ function fyldecoastccgsQueryVars($vars) {
 
 require get_theme_file_path( '/inc/functions/search-route.php' );
 require get_theme_file_path( '/inc/functions/accordion/accordion-shortcode.php' );
+require get_theme_file_path( '/inc/functions/post_types.php' );
+require get_theme_file_path( '/inc/functions/shortcodes.php' );
 
 
 
