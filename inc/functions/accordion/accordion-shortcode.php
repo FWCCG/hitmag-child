@@ -15,7 +15,7 @@
 
 	function create_accordion_shortcode( $atts , $content = null ) {
 
-		return '<script src="https://code.jquery.com/jquery-1.12.4.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script>$( function() { $( "#accordion" ).accordion({ active: false, collapsible: true });} ); </script>' . '<div class="peeker-container"><div class="accordion-peeker">Click each header to expand its content</div></div><div id="accordion">' . do_shortcode($content) . '</div>';
+		return '<script src="https://code.jquery.com/jquery-1.12.4.js"></script><script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script><script>$( function() { $( "#accordion" ).accordion({ active: false, collapsible: true, heightStyle: "content" });} ); </script>' . '<div class="peeker-container"><div class="accordion-peeker">Click each header to expand its content</div></div><div id="accordion">' . do_shortcode($content) . '</div>';
 	}
 
 	function accordion_shortcode_section( $atts , $content = null ) {
