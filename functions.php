@@ -10,11 +10,6 @@ function fyldecoastccgsQueryVars($vars) {
   add_filter('query_vars', 'fyldecoastccgsQueryVars');
 
 require get_theme_file_path( '/inc/functions/search-route.php' );
-require get_theme_file_path( '/inc/functions/accordion/accordion-shortcode.php' );
-require get_theme_file_path( '/inc/functions/post_types.php' );
-require get_theme_file_path( '/inc/functions/shortcodes.php' );
-
-
 
 function fyldecoastccgs_doclibrary_rest() {
     
@@ -367,5 +362,8 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
         echo "</div>";
     }
 }
+require get_theme_file_path( '/inc/functions/shortcodes.php' );
+require get_theme_file_path( '/inc/functions/accordion/accordion-shortcode.php' );
+require get_theme_file_path( '/inc/functions/post_types.php' );
 
 ?>

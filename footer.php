@@ -17,12 +17,98 @@
 		<div class="hm-container">
 			<div class="footer-widget-area">
 				<div class="footer-sidebar" role="complementary">
-					<?php if ( ! dynamic_sidebar( 'footer-left' ) ) : ?>
+			
+			<div class="widget">
+			<h4 class="widget-title">Upcoming events</h4>
+			<?php	$today = date('Ymd');
+    
+    $upcomingeventsshortcode = new WP_Query(array(
+			  'post_type' => 'event',
+			  'posts_per_page'  => 3,
+              'meta_key' => 'start',
+              'meta_query' => array(
+                array(
+                     'key'     => 'start',
+                     'value'   => $today,
+                     'compare' => '>=',
+                     'type'    => 'DATETIME',
+                )),
+			  'orderby' => 'meta_value',
+              'order' => 'ASC'
+			   ));
+    
+   if($upcomingeventsshortcode->have_posts()) : while($upcomingeventsshortcode->have_posts()) : $upcomingeventsshortcode->the_post(); 
+        $upcomingEventsID = get_the_ID();
+        $upcomingEventsCategory = get_the_terms($post->ID, 'eventcategory');
+        $upcomingEventsCategoryTop = $upcomingEventsCategory[0]->name;
+        $upcomingEventsLink .= get_the_permalink();
+        $upcomingEventsTitle = get_the_title();
+        $upcomingEventsDate = get_field('start', false, false);
+        $upcomingEventsNewDate = date("d F Y", strtotime($upcomingEventsDate));
+        $upcomingEventsNewTime = date("g:i a", strtotime($upcomingEventsDate));
+        $upcomingEventsOutput .= "<li class='jobs_shortcode__item'><a href='$upcomingEventsLink'><span class='jobs_shortcode__title'>$upcomingEventsTitle</span><br><span class='jobs_shortcode__meta'>$upcomingEventsNewDate at $upcomingEventsNewTime</span><br><span class='jobs_shortcode__meta'>$upcomingEventsCategoryTop</span></a></li>   
+        ";
+    
+    
+    endwhile; else: $upcomingEventsOutput .="nothing found.";
+        
+    endif;
+    
+    wp_reset_query();     
+    
+    echo '<ul class="jobs_shortcode">' . $upcomingEventsOutput . '<span class="events_shortcode__allevents"><a class="btn btn--white" href="https://www.fyldecoastccgs.nhs.uk/news/upcoming-events/">View all events</a></span>';
+		?>	</div>	
+				<?php if ( ! dynamic_sidebar( 'footer-left' ) ) : ?>
 						
 					<?php endif; // end sidebar widget area ?>
 				</div><!-- .footer-sidebar -->
 		
 				<div class="footer-sidebar" role="complementary">
+
+				<div class="widget"><h4 class="widget-title">Latest jobs</h4>
+				<?php
+				$today = date('Ymd');
+    
+		$jobsShortcut = new WP_Query(array(
+			 'post_type' => 'job',
+			 'posts_per_page'  => 5,
+			 'meta_key' => 'closing_date',
+						 'paged' => $paged,  
+						 'meta_query' => array(
+								array(
+											 'key'     => 'closing_date',
+											 'value'   => $today,
+											 'compare' => '>=',
+											 'type'    => 'DATETIME',
+												),
+									 ),
+			 'orderby' => 'date',
+				));
+											 
+					 if ( $jobsShortcut->have_posts() ) : while ( $jobsShortcut->have_posts() ) : $jobsShortcut->the_post();
+	 
+			 $jobsLink .= get_the_permalink();
+			 $jobsTitle = get_the_title();
+			 $jobsOrganisations = get_field('organisation');
+			 $jobsSalary = get_field('salary');
+			 $jobsDate = get_field('closing_date', false, false);
+			 $jobsClose = date("d F Y", strtotime($jobsDate));
+			 $jobsOutput .= "<li class='jobs_shortcode__item'><a href='$jobsLink'><span class='jobs_shortcode__title'>$jobsTitle</span>
+			 <br><span class='jobs_shortcode__meta'>Salary: $jobsSalary</span>
+			 <br><span class='jobs_shortcode__meta'>Organisation: $jobsOrganisations</span>
+			 <br><span class='jobs_shortcode__meta'>Closing date: $jobsClose</span>
+			 </a></li>";
+	 
+	 
+	 endwhile; else: $jobsOutput .="nothing found.";
+			 
+	 endif;
+	 
+	 wp_reset_query();     
+	 
+	 echo '<ul class="jobs_shortcode">' . $jobsOutput . '</ul> <span class="jobs_shortcode__alljobs"><a class="btn btn--white" href="https://www.fyldecoastccgs.nhs.uk/job/">View all jobs</a></span>';
+				?>
+				</div>
 					<?php if ( ! dynamic_sidebar( 'footer-mid' ) ) : ?>
 
 					<?php endif; // end sidebar widget area ?>
