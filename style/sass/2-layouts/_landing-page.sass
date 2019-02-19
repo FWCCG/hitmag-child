@@ -1,4 +1,41 @@
 /* Landing Page */
     
-.landing-page
-    border-bottom:none
+.promo-boxes_container
+    display: flex
+    justify-content: space-between
+    flex-flow: row wrap
+
+.promo-boxes 
+    width: 30%
+    margin-bottom: 20px
+    padding-bottom: 0
+    border-bottom: solid 2px #005db9
+    background-color: $nhspalegray
+    position: relative
+
+.promo-boxes-title 
+    position: absolute
+    padding: 5px
+    bottom: 5px
+    left: 0
+    width: 100%
+    background: rgba(255,255,255,.7)
+    color: #000
+    font-weight: 700
+    display: block
+
+
+.no-promo-boxes__item 
+    display: block
+    color: white
+    width: 45%
+    margin-bottom: 20px
+    padding: 10px
+    background: #005db9
+
+    &:hover 
+        background: #40b4e5
+        color: white
+
+    &:visited 
+        color: white
