@@ -15,7 +15,14 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="pgjN-TE1a98a2OyZJiCKb6GQ9-4NovstW_WBgrAZkwE" />
-
+<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_stylesheet_directory_uri(  );?>/inc/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(  );?>/inc/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(  );?>/inc/favicon/favicon-16x16.png">
+<link rel="manifest" href="<?php echo get_stylesheet_directory_uri(  );?>/inc/faviconsite.webmanifest">
+<link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(  );?>/inc/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-TileImage" content="<?php echo get_stylesheet_directory_uri(  );?>/inc/favicon/mstile-144x144.png">
+<meta name="theme-color" content="#ffffff">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
