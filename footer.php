@@ -71,7 +71,7 @@
     
 		$jobsShortcut = new WP_Query(array(
 			 'post_type' => 'job',
-			 'posts_per_page'  => 5,
+			 'posts_per_page'  => 3,
 			 'meta_key' => 'closing_date',
 						 'paged' => $paged,  
 						 'meta_query' => array(

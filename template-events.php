@@ -76,7 +76,7 @@ get_header();
                             <img class="events__photo" src="<?php bloginfo('stylesheet_directory'); ?>/images/default-event-image.jpg" alt="<?php the_title(); ?>" />
                         <?php } ?>
                     </div>
-                            <span class="events__title"><?php echo mb_strimwidth( get_the_title(), 0, 50, '...' );  ?></span></a></br>
+                            <span class="events__title"><?php echo mb_strimwidth( get_the_title(), 0, 50, '...' );  ?></span></a></ br>
                             <span class="events__meta"><i class="far fa-calendar-alt"><span class="screen-reader-text">Date</span></i> <?php echo $EventDate ?></span>
                             <span class="events__meta"><i class="far fa-clock"><span class="screen-reader-text">Time</span></i> <?php echo $EventTime ?></span>
                             
