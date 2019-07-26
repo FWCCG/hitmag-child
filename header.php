@@ -70,9 +70,13 @@
 
 		<div class="header-main-area">
 			<div class="hm-container">
+			<div class="intranet-logo">
+						
+					</div>
 			<div class="site-branding">
 				<div class="site-branding-content">
-					<div class="hm-logo">
+				<!-- .hm-logo -->
+										<div class="hm-logo">
 						<?php hitmag_the_custom_logo(); ?>
 					</div><!-- .hm-logo -->
 
