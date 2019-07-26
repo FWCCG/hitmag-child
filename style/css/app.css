@@ -1725,6 +1725,6 @@ body.admin-bar .search-overlay { top: 32px; }
 
 .intranet .intranet-logo { width: 400px; height: 200px; background: url("https://intranet.fyldecoastccgs.nhs.uk/wp-content/uploads/2019/07/Intranet.png") no-repeat center center; background-size: contain; float: left; display: block; }
 
-.intranet .site-branding { max-width: 50%; max-height: 100%; }
+.intranet .site-branding { max-width: 40%; max-height: 100%; }
 
 .intranet .custom-logo { max-width: 100%; }
