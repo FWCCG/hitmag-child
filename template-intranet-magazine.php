@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Magazine Homepage
+ * Template Name: Intranet Homepage
  *
  * Displays the Magazine Template of the theme.
  * 
@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
