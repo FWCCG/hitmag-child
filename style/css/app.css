@@ -1728,3 +1728,5 @@ body.admin-bar .search-overlay { top: 32px; }
 .intranet .site-branding { max-width: 40%; max-height: 100%; }
 
 .intranet .custom-logo { max-width: 100%; }
+
+.intranet .footer-widget-area { display: none; }

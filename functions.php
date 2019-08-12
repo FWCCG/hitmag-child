@@ -366,4 +366,66 @@ require get_theme_file_path( '/inc/functions/shortcodes.php' );
 require get_theme_file_path( '/inc/functions/accordion/accordion-shortcode.php' );
 require get_theme_file_path( '/inc/functions/post_types.php' );
 
+// Login Screen amendments
+
+function restrict_admin()
+{
+    if ( ! current_user_can( 'manage_options' ) && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
+                wp_redirect( site_url() );
+    }
+}
+add_action( 'admin_init', 'restrict_admin', 1 );
+
+function login_checked_remember_me() {
+    add_filter( 'login_footer', 'rememberme_checked' );
+    }
+    add_action( 'init', 'login_checked_remember_me' );
+    
+    function rememberme_checked() {
+    echo "<script>document.getElementById('rememberme').checked = true;</script>";
+    }
+
+function my_login_logo_one() { 
+    ?> 
+    <style type="text/css"> 
+    body.login div#login h1 a {
+        background-image: url(https://intranet.fyldecoastccgs.nhs.uk/wp-content/uploads/2019/07/logo.png);
+        background-size: contain;
+        padding-bottom: 5px; 
+        width: 300px;
+        height: 100px;} 
+    </style>
+        <?php 
+    } add_action( 'login_enqueue_scripts', 'my_login_logo_one' );
+
+function custom_loginfooter() { ?>
+    <p>
+    <a style="text-decoration:none; display:block; margin-bottom: 20px; font-weight:bold" href="https://insight.fyldecoastccgs.nhs.uk/view.php?id=25184" target="_blank">Don't have a login? Register now!</a>    </p>
+<?php }
+add_action('login_form','custom_loginfooter');
+
+add_filter( 'password_hint', function( $hint )
+{
+  return __( "Hint: The password should be at least eight characters long. To make it stronger, use upper and lower case letters and numbers.  If your chosen password is weak don't worry.  Simply tick the 'use weak password' box." );
+} );
+
+add_action('login_enqueue_scripts', function(){
+    wp_dequeue_script('user-profile');
+    wp_dequeue_script('password-strength-meter');
+    wp_deregister_script('user-profile');
+    
+    $suffix = SCRIPT_DEBUG ? '' : '.min';
+    wp_enqueue_script( 'user-profile', "/wp-admin/js/user-profile$suffix.js", array( 'jquery', 'wp-util' ), false, 1 );
+    });
+
+// hide dashboard to subscribers
+add_action('admin_init', 'disable_dashboard');
+
+function disable_dashboard() {
+    if (current_user_can('subscriber') && is_admin()) {
+        wp_redirect(home_url());
+        exit;
+    }
+}
+
 ?>
