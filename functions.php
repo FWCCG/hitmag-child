@@ -368,14 +368,6 @@ require get_theme_file_path( '/inc/functions/post_types.php' );
 
 // Login Screen amendments
 
-function restrict_admin()
-{
-    if ( ! current_user_can( 'manage_options' ) && '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
-                wp_redirect( site_url() );
-    }
-}
-add_action( 'admin_init', 'restrict_admin', 1 );
-
 function login_checked_remember_me() {
     add_filter( 'login_footer', 'rememberme_checked' );
     }
