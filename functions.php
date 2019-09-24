@@ -362,6 +362,7 @@ function custom_pagination($numpages = '', $pagerange = '', $paged='') {
         echo "</div>";
     }
 }
+
 require get_theme_file_path( '/inc/functions/shortcodes.php' );
 require get_theme_file_path( '/inc/functions/accordion/accordion-shortcode.php' );
 require get_theme_file_path( '/inc/functions/post_types.php' );

@@ -108,6 +108,7 @@ class HitMag_Single_Category_Posts extends WP_Widget {
 		?>
 
 		<div class="hitmag-one-category">
+			TEST
 			<?php $hmp_count = 1 ?>
 			<?php 
 				if ( $latest_posts -> have_posts() ) :
@@ -168,7 +169,7 @@ class HitMag_Single_Category_Posts extends WP_Widget {
 }
 
 // Register single category posts widget
-function hitmag_register_single_category_posts() {
-    register_widget( 'HitMag_Single_Category_Posts' );
+function hitmag_register_single_category_posts_updated() {
+    register_widget( 'HitMag_Single_Category_Posts Updated' );
 }
-add_action( 'widgets_init', 'hitmag_register_single_category_posts' );
+add_action( 'widgets_init', 'hitmag_register_single_category_posts updated' );

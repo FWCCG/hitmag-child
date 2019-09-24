@@ -56,7 +56,7 @@
   endif;
   wp_reset_query();     
   
-  echo $upcomingEventsOutput . '<span class="events_shortcode__allevents"><a class="btn btn--blue" href="https://www.fyldecoastccgs.nhs.uk/news/upcoming-events/">View all  upcoming events</a></span>'; 
+  echo $upcomingEventsOutput . '<span class="events_shortcode__allevents"><a class="btn btn--blue" href="/news/upcoming-events/">View all  upcoming events</a></span>'; 
    ?>
 </div>
 <?php dynamic_sidebar( 'sidebar-2' ); ?>

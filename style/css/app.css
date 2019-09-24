@@ -1500,6 +1500,8 @@ nav { font-family: FrutigerLT-Roman, Arial, sans-serif; }
 
 .hm-nav-container { padding-top: 10px; }
 
+.main-navigation a { color: white; }
+
 .main-navigation ul ul a { width: 250px; }
 
 .main-navigation ul ul { background: #005db9; }
@@ -1729,4 +1731,4 @@ body.admin-bar .search-overlay { top: 32px; }
 
 .intranet .custom-logo { max-width: 100%; }
 
-.intranet .footer-widget-area { display: none; }
+.intranet .widget-jobs { display: none; }

@@ -131,7 +131,7 @@ class HitMag_Grid_Category_Posts extends WP_Widget {
 
                 while ( $latest_posts -> have_posts() ) : $latest_posts -> the_post(); ?>
 
-                    <div class="hmw-grid-post">
+                    <div class="hmw-grid-post"> 
                         <div class="hm-grid-thumb">
                             <?php if ( has_post_thumbnail() ) { ?>
                                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'hitmag-grid' ); ?></a>
@@ -160,6 +160,6 @@ class HitMag_Grid_Category_Posts extends WP_Widget {
 
 // Register single category posts widget
 function hitmag_register_grid_category_posts() {
-    register_widget( 'HitMag_Grid_Category_Posts' );
+    register_widget( 'HitMag_Grid_Category_Posts Updated' );
 }
 add_action( 'widgets_init', 'hitmag_register_grid_category_posts' );

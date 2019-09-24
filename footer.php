@@ -56,7 +56,7 @@
     
     wp_reset_query();     
     
-    echo '<ul class="jobs_shortcode">' . $upcomingEventsOutput . '<span class="events_shortcode__allevents"><a class="btn btn--white" href="https://www.fyldecoastccgs.nhs.uk/news/upcoming-events/">View all events</a></span>';
+    echo '<ul class="jobs_shortcode">' . $upcomingEventsOutput . '<span class="events_shortcode__allevents"><a class="btn btn--white" href="/news/upcoming-events/">View all events</a></span>';
 		?>	</div>	
 				<?php if ( ! dynamic_sidebar( 'footer-left' ) ) : ?>
 						
@@ -65,7 +65,7 @@
 		
 				<div class="footer-sidebar" role="complementary">
 
-				<div class="widget"><h4 class="widget-title">Latest jobs</h4>
+				<div class="widget widget-jobs"><h4 class="widget-title">Latest jobs</h4>
 				<?php
 				$today = date('Ymd');
     

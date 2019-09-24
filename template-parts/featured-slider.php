@@ -6,7 +6,7 @@ if ( true == get_theme_mod( 'show_slider', true ) ) :
     $slider_posts = new WP_Query (
         array(
             'cat'                   => $hm_slider_category,
-            'posts_per_page'        => 5,
+            'posts_per_page'        => 10,
             'ignore_sticky_posts'   => true
         )
     )

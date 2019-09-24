@@ -38,9 +38,9 @@
 		<?php if ( true == get_theme_mod( 'display_topbar', 'true' ) ) : ?>
 
 			<?php if ( has_nav_menu( 'menu-2' ) ) : ?>
-				<div class="hm-topnavbutton">
+				<div class="hm-topnavbutton" aria-hidden="true">
 					<div class="hm-nwrap">
-						<a href="#" class="navbutton" id="top-nav-button"><?php esc_html_e( 'Top Menu', 'hitmag' ); ?></a>
+						<a href="#" class="navbutton" id="top-nav-button" aria-label="Button to activate the mobile friendly navigation menu"><?php esc_html_e( 'Top Menu', 'hitmag' ); ?></a>
 					</div>	
 				</div>
 				<div class="responsive-topnav"></div>					
