@@ -24,7 +24,8 @@ if ( true == get_theme_mod( 'show_slider', true ) ) :
                         if ( has_post_thumbnail() ) {
                             $thumb_id               = get_post_thumbnail_id();
                             $featured_url_array     = wp_get_attachment_image_src( $thumb_id, 'hitmag-featured' );
-                            $featured_image_url     = $featured_url_array[0]; 
+                            $featured_image_url     = $featured_url_array[0];
+                            $featured_image_alt     = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
                         } else {
                             $stylesheetdirectory    = get_bloginfo('stylesheet_directory');
                             $featured_image_url     = $stylesheetdirectory . '/images/default-slide-image.jpg';
@@ -75,13 +76,14 @@ if ( true == get_theme_mod( 'show_slider', true ) ) :
                                 $thumb_id               = get_post_thumbnail_id();
                                 $thumb_url_array        = wp_get_attachment_image_src( $thumb_id, 'hitmag-thumbnail' );
                                 $thumb_url              = $thumb_url_array[0];
+                                $thumb_alt              = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
                             } else {
                                 $thumb_url = $stylesheetdirectory . '/images/default-slide-image-thumb.jpg';
                             }
                         ?>
 
                         <li>
-                            <div class="hm-thumb-bg"><img src="<?php echo esc_url( $thumb_url ); ?>" /></div>
+                            <div class="hm-thumb-bg"><img src="<?php echo esc_url( $thumb_url ); ?>" alt="<?php echo ( $thumb_alt ); ?>" /><span class="screen-reader-text"><?php the_title(); ?></span></div>
                         </li>
 
                     <?php 
