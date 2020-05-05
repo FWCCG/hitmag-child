@@ -7,7 +7,7 @@ if ( true == get_theme_mod( 'show_slider', true ) ) :
         array(
             'cat'                   => $hm_slider_category,
             'posts_per_page'        => 10,
-            'ignore_sticky_posts'   => true
+            'ignore_sticky_posts'   => false
         )
     )
 

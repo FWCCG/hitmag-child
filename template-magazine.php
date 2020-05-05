@@ -11,7 +11,21 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+		<a class="covid-link" href="https://www.fyldecoastccgs.nhs.uk/local-services/coronavirus/">
+			<div class="covid-container">
+				<div class="row">
+					<div class="col col-2">
+						<img class="covid-HMlogo" src="https://www.fyldecoastccgs.nhs.uk/wp-content/uploads/2020/04/HMlogo.png">
+					</div>
+					<div class="col col-4">
+						<span class="covid-text covid-text--green">Coronavirus</span><br />
+						<span class="covid-text">Stay&nbsp;home, </span><span class="covid-text">protect&nbsp;the&nbsp;NHS, </span><br /><span class="covid-text">Save&nbsp;lives</span>
+					</div>
+					<div class="col col-1">
+						<img class="covid-NHSlogo" src="https://www.fyldecoastccgs.nhs.uk/wp-content/uploads/2020/04/nhslogo.png">
+					</div>
+				</div>
+			</div></a>
         <?php
 
             get_template_part( 'template-parts/featured-slider' );

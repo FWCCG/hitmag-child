@@ -10,7 +10,7 @@
 ?>
 
 <aside id="secondary" class="widget-area" role="complementary">
-<div class="widget">
+<div class="widget event-widget-home">
 <h4 class="widget-title">Upcoming events</h4>
 <?php 
     $today = date('Ymd');
